@@ -4,13 +4,22 @@ int main()
 {
     float altura, peso, imc;
     
-    ///////////altura
+    ///////////validacion altura 
+    do{
     printf("Ingresa tu altura en metros: ");
     scanf(" %f", &altura);
-    
-    ///////////peso
+        if(altura<=0){
+            printf("Ingresa un valor real\n");
+        }
+    }while(altura<=0);
+    ///////////validacion peso
+    do{
     printf("Ingresa tu peso en kilogramos: ");
     scanf(" %f", &peso);
+        if(peso<=0){
+            printf("Ingresa un valor real\n");
+        }
+    }while(peso<=0);
     
     ///////////calculo imc
     imc=peso/(altura*altura);
